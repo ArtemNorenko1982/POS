@@ -1,0 +1,29 @@
+.row {
+    display: block;
+}
+
+.main-screen {
+    background-color: azure;
+}
+
+.login {
+    align-content: center;
+}
+
+.login_title {
+    overflow: hidden;
+}
+
+/* 
+.login_svg {}
+.login-input {}
+.password-input {}
+
+.input-common {}
+
+.common-button {}
+.common-link {}
+
+.full-width {}
+
+ */
