@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { PasswordRecoveryComponent } from '../password.recovery.component/password.recovery.component';
+import { PasswordRecoveryComponent } from '../password.recovery.component/PasswordRecovery';
 
 export class LoginComponent extends Component {
 

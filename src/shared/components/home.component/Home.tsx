@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { CurentUser, Token } from "../../../constants/local.storage.units";
+import { CurentUser, Token } from "../../../constants/LocalStorageUnits";
 import { isNull } from "../../../utils/utils";
-import { UserService } from "../../services/user.service";
+import { UserService } from "../../services/UserService";
 
 export default class HomeComponent extends Component {
 
@@ -39,10 +39,6 @@ export default class HomeComponent extends Component {
 
         }
 
-        return (
-            <div>
-                {result}
-            </div>
-        );
+        return (result);
     }
 }

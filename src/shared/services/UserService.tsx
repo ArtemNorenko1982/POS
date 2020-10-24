@@ -1,4 +1,4 @@
-import { CurentUser, Token } from "../../constants/local.storage.units";
+import { CurentUser, Token } from "../../constants/LocalStorageUnits";
 
 export class UserService {
 
