@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { PasswordRecoveryComponent } from '../password.recovery.component/PasswordRecovery';
+import { PasswordRecovery } from '../password.recovery.component/PasswordRecovery';
 
-export class LoginComponent extends Component {
+export class Login extends Component {
 
     doLogin() {
         alert("success")
@@ -47,9 +47,9 @@ export class LoginComponent extends Component {
 
                         <input type="checkbox" value="Remember me" />
                         <button className="common-button full-width" onClick={this.doLogin}>Enter</button>
-                        <Link to="password-recovery" className="common-link full-width" component={PasswordRecoveryComponent}>Forgot password</Link>
+                        <Link to="password-recovery" className="common-link full-width" component={PasswordRecovery}>Forgot password</Link>
                     </form>
-                    <Route path="password-recovery" component={PasswordRecoveryComponent} />
+                    <Route path="password-recovery" component={PasswordRecovery} />
                 </div >
             </BrowserRouter>
         );

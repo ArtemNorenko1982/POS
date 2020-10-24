@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class PasswordRecoveryComponent extends Component {
+export class PasswordRecovery extends Component {
 
     render() {
         return (

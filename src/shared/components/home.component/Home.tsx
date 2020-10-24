@@ -4,7 +4,7 @@ import { CurentUser, Token } from "../../../constants/LocalStorageUnits";
 import { isNull } from "../../../utils/utils";
 import { UserService } from "../../services/UserService";
 
-export default class HomeComponent extends Component {
+export default class Home extends Component {
 
     userService: UserService;
     constructor(props) {
