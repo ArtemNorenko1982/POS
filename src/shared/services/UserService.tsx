@@ -1,4 +1,5 @@
 import { CurentUser, Token } from "../../constants/LocalStorageUnits";
+import { isNull } from "../../utils/utils";
 
 export class UserService {
 
@@ -14,5 +15,13 @@ export class UserService {
 
     getNewPassword(email: string) {
 
+    }
+
+    isUserAuthorized(): boolean {
+        return !isNull(localStorage.getItem(Token));
+    }
+
+    getUserName(): string {
+        return `${localStorage.getItem(CurentUser)}`;
     }
 }

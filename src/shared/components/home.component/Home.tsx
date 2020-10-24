@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { CurentUser, Token } from "../../../constants/LocalStorageUnits";
 import { isNull } from "../../../utils/utils";
 import { UserService } from "../../services/UserService";
+import NavMenu from "../nav.menu.component/NavMenu";
+import ServiceItems from '../service.items.component/ServiceItems'
 
 export default class Home extends Component {
 
@@ -12,33 +14,16 @@ export default class Home extends Component {
         this.userService = new UserService();
     }
 
-    isUserAuthorized(): boolean {
-        return !isNull(localStorage.getItem(Token));
-    }
-
-    getUserName(): string {
-        return `${localStorage.getItem(CurentUser)}`;
-    }
-
     navigateToLogIn() {
 
     }
 
     render() {
-        var result =
+        return (
             <div>
-                <h1>Please authorize</h1>
-                <button onClick={this.navigateToLogIn}>Authorize</button>
+                <NavMenu></NavMenu>
+                <ServiceItems></ServiceItems>
             </div>
-        if (this.isUserAuthorized()) {
-            result =
-                <div>
-                    <h1>Hello {this.getUserName}</h1>
-                    <button onClick={this.userService.logout}>Log out</button>
-                </div>
-
-        }
-
-        return (result);
+        );
     }
 }

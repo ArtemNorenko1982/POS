@@ -1,0 +1,22 @@
+.service-item {
+    width: 250px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 3px #ccc;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: lightgrey;
+    color: white;
+}
+
+.service-item img {
+    width: 30%;
+}
+
+.service-item:hover, .service-item:active {
+    background-color: #fff;/*cornsilk;*/
+    box-shadow: 0 4px 30px black;
+    color: black;
+}
