@@ -14,7 +14,8 @@ class App extends Component {
   }
 
   render() {
-    var result = <BrowserRouter>
+    var result =
+    <BrowserRouter>
       {this.detectRout()}
     </BrowserRouter>
     return (result);
@@ -25,8 +26,7 @@ class App extends Component {
       <div className="App">
         <Home />
       </div>
-
-    if (this.userService.isUserAuthorized()) {
+    if (!this.userService.isUserAuthorized()) {
       result = 
         <div className="App">
           <Login />
