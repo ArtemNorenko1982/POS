@@ -1,2 +1,2 @@
-export const isNull = (value: any) => value === null || value === undefined
-export const isStringNull = (value: string) => isNull(value) || value.trim().length === 0
+export const isNull = (value: any) => value === null || value === undefined;
+export const isStringNull = (value: string) => isNull(value) || value.trim().length === 0;
