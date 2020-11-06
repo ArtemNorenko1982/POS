@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "*.tsx": "javascriptreact"
+        "*.tsx": "typescriptreact",
+        "*.sx": "typescriptreact"
     },
     "editor.insertSpaces": true,
     "editor.detectIndentation": false,

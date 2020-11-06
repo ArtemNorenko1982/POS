@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import './css/App.css';
-import UserService from './shared/services/UserService';
-import * as RouteConstants from './constants/RouteConstants';
-import Login from './shared/components/login.component/Login';
-import Home from './shared/components/home.component/Home';
+import UserService from '../services/UserService';
+import * as RouteConstants from '../../constants/RouteConstants';
+import Login from './login.component/Login';
+import Home from './home.component/Home';
 
 class App extends Component {
   userService = new UserService();

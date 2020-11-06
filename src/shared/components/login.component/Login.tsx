@@ -7,7 +7,7 @@ import PasswordRecovery from '../password.recovery.component/PasswordRecovery';
 class Login extends Component {
 
   doLogin() {
-    this.alert('success');
+    alert('success');
   }
 
   render() {

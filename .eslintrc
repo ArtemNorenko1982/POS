@@ -32,6 +32,7 @@
             "warn",
             "always"
         ],
+        "class-methods-use-this": ["off"],
         "no-unused-vars": [
             "warn",
             {
@@ -39,19 +40,12 @@
                 "args": "none"
             }
         ],
-        "@typescript-eslint/comma-dangle": ["error", "never"],
-        "@typescript-eslint/no-loop-func": "error",
-        "@typescript-eslint/no-redeclare": ["error", { "builtinGlobals": true }],
-        "@typescript-eslint/no-shadow": ["error", { "hoist": "functions" }],
-        "@typescript-eslint/no-unused-vars": [
-            "warn",
-            {
-                "vars": "all",
-                "args": "none"
-            }
-        ],
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-explicit-any": [
+        "comma-dangle": ["error"],
+        "no-loop-func": "error",
+        "no-redeclare": ["error", { "builtinGlobals": true }],
+        "no-shadow": ["error", { "builtinGlobals": true, "hoist": "functions", "allow": [] }],
+        "explicit-function-return-type": "off",
+        "no-explicit-any": [
             "error",
             {
                 "ignoreRestArgs": true

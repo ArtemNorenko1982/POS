@@ -1,20 +1,19 @@
-/* eslint-disable class-methods-use-this */
 import { CURENTUSER, TOKEN } from '../../constants/LocalStorageConstants';
 import { isNull } from '../../utils/utils';
 
 class UserService {
 
-  login(username: string, password: string) {
+  login(username: string, password: string): void {
     localStorage.setItem(CURENTUSER, username);
     localStorage.setItem(TOKEN, password);
   }
 
-  logout() {
+  logout(): void {
     localStorage.removeItem(CURENTUSER);
     localStorage.removeItem(TOKEN);
   }
 
-  getNewPassword(email: string) {
+  getNewPassword(email: string): void {
   }
 
   isUserAuthorized(): boolean {
