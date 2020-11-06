@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import { CURENTUSER, TOKEN } from '../../constants/LocalStorageUnits';
+import { CURENTUSER, TOKEN } from '../../constants/LocalStorageConstants';
 import { isNull } from '../../utils/utils';
 
 class UserService {

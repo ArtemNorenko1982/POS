@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 import './Login.css';
-import PasswordRecovery from '../password.recovery.component/PasswordRecovery';
+import * as RouteConstants from '../../../constants/RouteConstants';
 
 class Login extends Component {
 
@@ -26,9 +26,9 @@ class Login extends Component {
           </label>
 
           <button type="button" className="login-button" onClick={this.doLogin}>Submit</button>
-          <Link to="/password-recovery" className="common-link">Forgot password</Link>
+          <Link to={RouteConstants.PasswordRecoveryRoute} className="common-link">Forgot password</Link>
         </form>
-        <Route path="/password-recovery" component={PasswordRecovery} />
+        <Route path={RouteConstants.PasswordRecoveryRoute.path} component={RouteConstants.PasswordRecoveryRoute.component} />
       </div>
     );
   }

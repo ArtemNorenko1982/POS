@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import './css/App.css';
-import Home from './shared/components/home.component/Home';
-import Login from './shared/components/login.component/Login';
 import UserService from './shared/services/UserService';
+import * as RouteConstants from './constants/RouteConstants';
 
 class App extends Component {
   userService = new UserService();
@@ -11,11 +10,14 @@ class App extends Component {
   detectRout() {
     let result = 
       <div className="App">
-        <Home />
+        <Route path={RouteConstants.LoginRoute.path} component={RouteConstants.LoginRoute.component} />
       </div>;
 
     if (!this.userService.isUserAuthorized()) {
-      result = <div className="App"><Login /></div>;
+      result =
+        <div className="App">
+          <Route path={RouteConstants.HomeRoute.path} component={RouteConstants.HomeRoute.component} />
+        </div>;
     }
 
     return result;
