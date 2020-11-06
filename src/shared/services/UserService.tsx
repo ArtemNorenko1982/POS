@@ -5,8 +5,8 @@ import { isNull } from '../../utils/utils';
 class UserService {
 
   login(username: string, password: string) {
-    localStorage.setItem(CURENTUSER, 'User Name');
-    localStorage.setItem(TOKEN, '123456789_Test_Token');
+    localStorage.setItem(CURENTUSER, username);
+    localStorage.setItem(TOKEN, password);
   }
 
   logout() {
