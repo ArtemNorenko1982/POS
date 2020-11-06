@@ -1,27 +1,29 @@
-import { CurentUser, Token } from "../../constants/LocalStorageUnits";
-import { isNull } from "../../utils/utils";
+/* eslint-disable class-methods-use-this */
+import { CURENTUSER, TOKEN } from '../../constants/LocalStorageUnits';
+import { isNull } from '../../utils/utils';
 
-export class UserService {
+class UserService {
 
-    login(username: string, password: string) {
-        localStorage.setItem(CurentUser, "User Name");
-        localStorage.setItem(Token, "123456789_Test_Token");
-    }
+  login(username: string, password: string) {
+    localStorage.setItem(CURENTUSER, 'User Name');
+    localStorage.setItem(TOKEN, '123456789_Test_Token');
+  }
 
-    logout() {
-        localStorage.removeItem(CurentUser);
-        localStorage.removeItem(Token);
-    }
+  logout() {
+    localStorage.removeItem(CURENTUSER);
+    localStorage.removeItem(TOKEN);
+  }
 
-    getNewPassword(email: string) {
+  getNewPassword(email: string) {
+  }
 
-    }
+  isUserAuthorized(): boolean {
+    return !isNull(localStorage.getItem(TOKEN));
+  }
 
-    isUserAuthorized(): boolean {
-        return !isNull(localStorage.getItem(Token));
-    }
-
-    getUserName(): string {
-        return `${localStorage.getItem(CurentUser)}`;
-    }
+  getUserName(): string {
+    return `${localStorage.getItem(CURENTUSER)}`;
+  }
 }
+
+export default UserService;
