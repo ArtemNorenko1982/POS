@@ -1,11 +1,11 @@
 import React from 'react';
 import './ServiceItem.css';
 
-const ServiceItem = (props) => {
+const ServiceItem = ({ src, title }) => {
   return (
     <article className="service-item">
-      <img src={props.src} alt='' />
-      <h2>{props.title}</h2>
+      <img src={src} alt='' />
+      <h2>{title}</h2>
     </article>
   );
 };
