@@ -10,19 +10,15 @@ class App extends Component {
   userService = new UserService();
 
   detectRout() {
-    let result = 
+    const isAuthorized = this.userService.isUserAuthorized();
+    return (
       <div className="App">
-        <Route path={RouteConstants.LoginRoute.path} component={Login} />
-      </div>;
-
-    if (!this.userService.isUserAuthorized()) {
-      result =
-        <div className="App">
-          <Route path={RouteConstants.HomeRoute.path} component={Home} />
-        </div>;
-    }
-
-    return result;
+        <Route
+          path={!isAuthorized ? RouteConstants.LoginRoute.path : RouteConstants.HomeRoute.path}
+          component={!isAuthorized ? Login : Home} 
+        />
+      </div>
+    );
   }
 
   render() {
