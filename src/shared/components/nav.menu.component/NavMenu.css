@@ -1,0 +1,22 @@
+.card-nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    background-color:steelblue;
+}
+
+.card-nav-menu li {
+    display: inline-flex;
+    margin: 20px;
+}
+
+.card-nav-menu a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.card-nav-menu a:hover, a:active {
+    color: blue;    
+}
