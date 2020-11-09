@@ -5,8 +5,8 @@ import './NavMenu.css';
 const menuItems = ['Home', 'Service', 'Reports', 'Extra', 'Log out'];
 
 const NavMenu = () => {
-  const navMenuItems = Array.prototype.map.call(menuItems, (item) => {
-    return <li><Link>{item}</Link></li>;
+  const navMenuItems = menuItems.map((item, index) => {
+    return <li><Link key={index}>{item}</Link></li>;
   });
   return (
     <div className="card-nav-menu">

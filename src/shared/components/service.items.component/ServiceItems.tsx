@@ -15,8 +15,8 @@ const services = [
 
 const ServiceItems = () => {
     
-  const serviceList = Array.prototype.map.call(services, (item) =>{
-    return <ServiceItem title={item.title} src={item.src} />;
+  const serviceList = services.map((item, index) =>{
+    return <ServiceItem key={index} title={item.title} src={item.src} />;
   });
 
   return (

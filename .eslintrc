@@ -8,6 +8,7 @@
     },
     "plugins": [
         "prettier",
+        "eslint",
         "@typescript-eslint"
     ],
     "extends": [
@@ -33,6 +34,8 @@
             "always"
         ],
         "class-methods-use-this": ["off"],
+        "no-const-assign": "error",
+        "prefer-const": "error",
         "no-unused-vars": [
             "warn",
             {
