@@ -1,2 +1,2 @@
-export const TOKEN = 'token';
-export const CURENTUSER = 'curentUser';
+export const Token = 'token';
+export const CurrentUser = 'currentUser';

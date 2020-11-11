@@ -1,27 +1,28 @@
-import { CURENTUSER, TOKEN } from '../../constants/LocalStorageConstants';
+import { CurrentUser, Token } from '../../constants/LocalStorageConstants';
 import { isNull } from '../../utils/utils';
 
 class UserService {
 
   login(username: string, password: string): void {
-    localStorage.setItem(CURENTUSER, username);
-    localStorage.setItem(TOKEN, password);
+    localStorage.setItem(CurrentUser, username);
+    localStorage.setItem(Token, password);
   }
 
   logout(): void {
-    localStorage.removeItem(CURENTUSER);
-    localStorage.removeItem(TOKEN);
+    localStorage.removeItem(CurrentUser);
+    localStorage.removeItem(Token);
   }
 
   getNewPassword(email: string): void {
   }
 
   isUserAuthorized(): boolean {
-    return !isNull(localStorage.getItem(TOKEN));
+    const result = !isNull(localStorage.getItem(Token))
+    return result;
   }
 
   getUserName(): string {
-    return `${localStorage.getItem(CURENTUSER)}`;
+    return `${localStorage.getItem(CurrentUser)}`;
   }
 }
 

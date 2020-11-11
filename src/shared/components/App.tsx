@@ -10,7 +10,7 @@ class App extends Component {
   userService = new UserService();
 
   detectRout() {
-    const isAuthorized = this.userService.isUserAuthorized();
+    const isAuthorized = true;//this.userService.isUserAuthorized();
     return (
       <div className="App">
         <Route
