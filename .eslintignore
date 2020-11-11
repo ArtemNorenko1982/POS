@@ -2,5 +2,6 @@
 build/*
 public/*
 src/react-app-env.d.ts
-src/serviceWorker.ts
+src/serviceWorker.js
 src/constants/*
+node_modules/*

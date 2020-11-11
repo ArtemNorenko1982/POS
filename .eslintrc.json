@@ -1,23 +1,26 @@
 {
     /*"root": "true",*/
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "react",
+        "import",
+        "react-hooks"
+    ],
+    "extends": [
+        "airbnb-typescript",
+        "prettier",
+        "eslint:recomended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended"
+    ],
     "env": {
         "node": true,
         "browser": true,
         "es6": true,
         "jest": true
     },
-    "plugins": [
-        "prettier",
-        "eslint",
-        "@typescript-eslint"
-    ],
-    "extends": [
-        "airbnb-typescript",
-        "react-app",
-        "prettier",
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "project": "./tsconfig.json"
     },
@@ -26,13 +29,11 @@
             "typescript": {
                 "alwaysTryTypes": true
             }
-        }
+        },
+        "linkComponents": ["Hyperlink", {"name":"Link", "linkAttribute":"to"}]
     },
     "rules": {
-        "object-curly-spacing": [
-            "warn",
-            "always"
-        ],
+        "object-curly-spacing": ["warn", "always"],
         "class-methods-use-this": ["off"],
         "no-const-assign": "error",
         "prefer-const": "error",
@@ -43,17 +44,17 @@
                 "args": "none"
             }
         ],
-        "comma-dangle": ["error"],
-        "no-loop-func": "error",
-        "no-redeclare": ["error", { "builtinGlobals": true }],
-        "no-shadow": ["error", { "builtinGlobals": true, "hoist": "functions", "allow": [] }],
+        // "no-explicit-any": [
+        //     "error",
+        //     {
+        //         "ignoreRestArgs": true
+        //     }
+        // ],
+        "comma-dangle": ["warn"],
+        "no-loop-func": "warn",
+        "no-redeclare": ["warn"], //{ "builtinGlobals": true }],
+        "no-shadow": ["warn"],//, { "builtinGlobals": true, "hoist": "functions", "allow": [] }],
         "explicit-function-return-type": "off",
-        "no-explicit-any": [
-            "error",
-            {
-                "ignoreRestArgs": true
-            }
-        ],
         "max-len": [
             "warn",
             {

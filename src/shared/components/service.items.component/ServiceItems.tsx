@@ -16,7 +16,7 @@ const services = [
 const ServiceItems = () => {
     
   const serviceList = services.map((item, index) =>{
-    return <ServiceItem key={index} title={item.title} src={item.src} />;
+    return <ServiceItem key={item.title} title={item.title} src={item.src} />;
   });
 
   return (

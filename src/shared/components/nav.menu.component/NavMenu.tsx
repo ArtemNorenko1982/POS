@@ -6,7 +6,7 @@ const menuItems = ['Home', 'Service', 'Reports', 'Extra', 'Log out'];
 
 const NavMenu = () => {
   const navMenuItems = menuItems.map((item, index) => {
-    return <li><Link key={index}>{item}</Link></li>;
+    return <li key={item}>{item}</li>;
   });
   return (
     <div className="card-nav-menu">

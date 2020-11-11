@@ -13,7 +13,7 @@ const PasswordRecovery = () => {
           <input id="userName" className="input-common login-input" type="text" placeholder="User name or email" />
         </label>
         <button type="button" className="common-button full-width">Get a new password</button>
-        <Link className="common-link full-width"> Back </Link>
+        {/* <Link href={} className="common-link full-width"> Back </Link> */}
       </form>
     </div>
   );
