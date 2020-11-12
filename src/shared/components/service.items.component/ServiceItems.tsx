@@ -14,8 +14,8 @@ const services = [
 ];
 
 const ServiceItems = () => {
-  const serviceList = services.map((item) => {
-    return <ServiceItem key={item.title} title={item.title} src={item.src} />;
+  const serviceList = services.map(({ title, src }) => {
+    return <ServiceItem key={title} title={title} src={src} />;
   });
 
   return <section className="service-items">{serviceList}</section>;
