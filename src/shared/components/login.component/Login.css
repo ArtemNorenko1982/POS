@@ -86,7 +86,7 @@
 
 .welcome-title {
     padding-bottom: 15px;
-    filter: url();
+    /*filter: url();*/
 }
 
 .slide-in-blurred-top {
