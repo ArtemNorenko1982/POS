@@ -14,16 +14,11 @@ const services = [
 ];
 
 const ServiceItems = () => {
-    
-  const serviceList = services.map((item, index) =>{
+  const serviceList = services.map((item) => {
     return <ServiceItem key={item.title} title={item.title} src={item.src} />;
   });
 
-  return (
-    <section className='service-items'>
-      {serviceList}
-    </section>
-  );
+  return <section className="service-items">{serviceList}</section>;
 };
 
 export default ServiceItems;

@@ -2,7 +2,6 @@ import { CurrentUser, Token } from '../../constants/LocalStorageConstants';
 import { isNull } from '../../utils/utils';
 
 class UserService {
-
   login(username: string, password: string): void {
     localStorage.setItem(CurrentUser, username);
     localStorage.setItem(Token, password);
@@ -13,11 +12,10 @@ class UserService {
     localStorage.removeItem(Token);
   }
 
-  getNewPassword(email: string): void {
-  }
+  getNewPassword(email: string): void {}
 
   isUserAuthorized(): boolean {
-    const result = !isNull(localStorage.getItem(Token))
+    const result = !isNull(localStorage.getItem(Token));
     return result;
   }
 
