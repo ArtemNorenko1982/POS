@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Redirect, Route } from 'react-router-dom';
 import './Login.css';
-import * as RouteConstants from '../../../constants/RouteConstants';
-import PasswordRecovery from '../password.recovery.component/PasswordRecovery';
+import * as RouteConstants from '../../constants/RouteConstants';
+import PasswordRecovery from '../PasswordRecovery/PasswordRecovery';
+import Auth from '../../helpers/Auth';
 
 class Login extends Component {
   doLogin() {
-    alert('success');
+    const userAuth = new Auth();
+    userAuth.login('admin', '123456789');
+    // if (userAuth.isUserAuthorized()) {
+    // }
   }
 
   render() {
@@ -40,6 +44,7 @@ class Login extends Component {
           <Link
             to={RouteConstants.PasswordRecoveryRoute.path}
             className="common-link"
+            onClick=
           >
             Forgot password
           </Link>
@@ -48,6 +53,7 @@ class Login extends Component {
           path={RouteConstants.PasswordRecoveryRoute.path}
           component={PasswordRecovery}
         />
+        <Redirect to={RouteConstants.PasswordRecoveryRoute.path} />
       </div>
     );
   }

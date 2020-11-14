@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceItem from '../service.item.component/ServiceItem';
+import ServiceItem from '../ServiceItem/ServiceItem';
 import './ServiceItems.css';
 
 const services = [

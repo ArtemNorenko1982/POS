@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Redirect } from 'react-router-dom';
-import '../../css/App.css';
-import RouterService from '../services/RouterService';
+import './App.css';
+import Router from '../../helpers/Router';
 
 class App extends Component {
-  router = new RouterService();
+  router = new Router();
 
   render() {
     const baseRoute = this.router.detectBaseUserRoute();

@@ -1,6 +1,6 @@
 import React from 'react';
-import NavMenu from '../nav.menu.component/NavMenu';
-import ServiceItems from '../service.items.component/ServiceItems';
+import NavMenu from '../NavMenu/NavMenu';
+import ServiceItems from '../ServiceItems/ServiceItems';
 
 const Home = () => {
   return (
