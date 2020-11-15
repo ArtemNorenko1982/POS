@@ -44,7 +44,6 @@ class Login extends Component {
           <Link
             to={RouteConstants.PasswordRecoveryRoute.path}
             className="common-link"
-            onClick=
           >
             Forgot password
           </Link>
@@ -53,7 +52,7 @@ class Login extends Component {
           path={RouteConstants.PasswordRecoveryRoute.path}
           component={PasswordRecovery}
         />
-        <Redirect to={RouteConstants.PasswordRecoveryRoute.path} />
+        {/* <Redirect to={RouteConstants.PasswordRecoveryRoute.path} /> */}
       </div>
     );
   }
