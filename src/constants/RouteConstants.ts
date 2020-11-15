@@ -1,3 +1,10 @@
 export const HomeRoute = { path:'/home' };
 export const LoginRoute = { path:'/login' };
 export const PasswordRecoveryRoute = { path:'/password-recovery' };
+export const SalesManagerRoute = { path:'/home/sales-manager' };
+export const SalesRoute = { path:'/home/sales' };
+export const SalesReportRoute = { path:'/home/sales-report' };
+export const AccountingRoute = { path:'/home/accounting' };
+export const CatalogsRoute = { path:'/home/catalogs' };
+export const SettingsRoute = { path:'/home/settings' };
+export const HelpRoute = { path:'/home/help' };

@@ -1,21 +1,59 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServiceItem from '../ServiceItem/ServiceItem';
 import './ServiceItems.css';
+import * as RouteConstants from '../../constants/RouteConstants';
 
 const services = [
-  { title: 'Sales Manager', src: './img/coin.png' },
-  { title: 'Sales', src: './img/shopping-cart.png' },
-  { title: 'Sales Report', src: './img/piggy-bank.png' },
-  { title: 'Lock', src: './img/hide.png' },
-  { title: 'Accounting', src: './img/laptop.png' },
-  { title: 'Catalogs', src: './img/book.png' },
-  { title: 'Settings', src: './img/settings.png' },
-  { title: 'Help', src: './img/speech-bubble.png' },
+  {
+    title: 'Sales Manager',
+    src: './img/coin.png',
+    navPath: RouteConstants.SalesManagerRoute.path,
+  },
+  {
+    title: 'Sales',
+    src: './img/shopping-cart.png',
+    navPath: RouteConstants.SalesRoute.path,
+  },
+  {
+    title: 'Sales Report',
+    src: './img/piggy-bank.png',
+    navPath: RouteConstants.SalesReportRoute.path,
+  },
+  {
+    title: 'Lock',
+    src: './img/hide.png',
+    navPath: RouteConstants.LoginRoute.path,
+  },
+  {
+    title: 'Accounting',
+    src: './img/laptop.png',
+    navPath: RouteConstants.AccountingRoute.path,
+  },
+  {
+    title: 'Catalogs',
+    src: './img/book.png',
+    navPath: RouteConstants.CatalogsRoute.path,
+  },
+  {
+    title: 'Settings',
+    src: './img/settings.png',
+    navPath: RouteConstants.SettingsRoute.path,
+  },
+  {
+    title: 'Help',
+    src: './img/speech-bubble.png',
+    navPath: RouteConstants.HelpRoute.path,
+  },
 ];
 
 const ServiceItems = () => {
-  const serviceList = services.map(({ title, src }) => {
-    return <ServiceItem key={title} title={title} src={src} />;
+  const serviceList = services.map((item) => {
+    return (
+      <Link to={item.navPath} className="link-item">
+        <ServiceItem key={item.title} title={item.title} src={item.src} />
+      </Link>
+    );
   });
 
   return <section className="service-items">{serviceList}</section>;

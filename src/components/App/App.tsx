@@ -10,7 +10,7 @@ class App extends Component {
     const baseRoute = this.router.detectBaseUserRoute();
     const result = (
       <div className="App">
-        <Route path={baseRoute.path} component={baseRoute.component} />
+        <Route exect path={baseRoute.path} component={baseRoute.component} />
         <Redirect to={baseRoute.path} />
       </div>
     );
