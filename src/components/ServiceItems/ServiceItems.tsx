@@ -50,8 +50,8 @@ const services = [
 const ServiceItems = () => {
   const serviceList = services.map((item) => {
     return (
-      <Link to={item.navPath} className="link-item">
-        <ServiceItem key={item.title} title={item.title} src={item.src} />
+      <Link key={item.title} to={item.navPath} className="link-item">
+        <ServiceItem title={item.title} src={item.src} />
       </Link>
     );
   });
