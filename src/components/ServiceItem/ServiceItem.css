@@ -25,3 +25,7 @@
 .service-item:hover img, .service-item:active img{
     filter: none;
 }
+
+.link-item {
+    text-decoration: none;
+}
