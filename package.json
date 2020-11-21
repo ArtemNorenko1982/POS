@@ -160,6 +160,7 @@
     "prettier": "^2.1.2",
     "prettier-eslint": "11.0.0",
     "prettier-eslint-cli": "5.0.0",
-    "react-is": "^17.0.1"
+    "react-is": "^17.0.1",
+    "sass": "^1.29.0"
   }
 }

@@ -56,7 +56,11 @@ const ServiceItems = () => {
     );
   });
 
-  return <section className="service-items">{serviceList}</section>;
+  return (
+    <div>
+      <section className="service-items">{serviceList}</section>
+    </div>
+  );
 };
 
 export default ServiceItems;
