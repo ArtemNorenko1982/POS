@@ -1,7 +1,7 @@
 import Auth from './Auth';
 import * as RouteConstants from '../constants/RouteConstants';
 import Login from '../components/Login/Login';
-import Main from '../components/Main/Main';
+import Main from '../components/Main';
 
 class Router {
   userService = new Auth();

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavMenu.css';
+import './NavMenu.scss';
 import { Route, Switch } from 'react-router';
 
 import Accounting from '../ServiceItems/Accounting/Accounting';
 import SalesReport from '../ServiceItems/SalesReport/SalesReport';
 import * as RouteConstants from '../../constants/RouteConstants';
 import Home from '../Home/Home';
-import Services from '../Services/Services';
+import Services from '../Services';
 
 const menuItems = [
   { title: 'Home', navPath: RouteConstants.HomeRoute.path },

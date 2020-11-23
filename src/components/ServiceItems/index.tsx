@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ServiceItem from '../ServiceItem/ServiceItem';
-import './ServiceItems.css';
+import './ServiceItems.scss';
 import * as RouteConstants from '../../constants/RouteConstants';
 
 const services = [
