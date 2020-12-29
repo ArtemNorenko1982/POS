@@ -4,7 +4,7 @@ import NavMenuItem from '../NavMenuItem';
 
 const NavMenu = ({ menuItems }: NavMenuProps) => {
   const navMenu = menuItems.map(({ src, title }) => {
-    return <NavMenuItem src={src} title={title} />;
+    return <NavMenuItem key={title} src={src} title={title} />;
   });
 
   return (

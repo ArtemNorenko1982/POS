@@ -4,7 +4,7 @@ import './NavMenu.scss';
 
 const NavMenuItem = ({ src = '' as string, title = '' as string }) => {
   return (
-    <li key={title}>
+    <li>
       <Link to={src}>{title}</Link>
     </li>
   );

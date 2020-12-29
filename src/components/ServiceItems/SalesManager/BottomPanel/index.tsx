@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import IButton from '../../../../helpers/Types/Button';
+import React from 'react';
+// import IButton from '../../../../helpers/Types/Button';
 import BaseButton from '../Button';
 import './BottomPanel.scss';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import * as RouteConstants from '../../constants/RouteConstants';
 import MainMenuItems from '../../helpers/Sources/MainNavMenu';
-import Test from '../Class/ClassTest';
+// import Test from '../Class/ClassTest';
 import Home from '../Home/Home';
 import NavMenu from '../NavMenu';
 import Accounting from '../ServiceItems/Accounting/Accounting';

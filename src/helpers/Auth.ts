@@ -12,7 +12,11 @@ class Auth {
     localStorage.removeItem(Token);
   }
 
-  getNewPassword(email: string) {}
+  getNewPassword(email: string) {
+    const val = email;
+    // eslint-disable-next-line no-console
+    console.log(val);
+  }
 
   isUserAuthorized() {
     const result = !isNull(localStorage.getItem(Token));
