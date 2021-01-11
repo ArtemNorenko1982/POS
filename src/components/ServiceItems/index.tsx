@@ -5,17 +5,17 @@ import ServiceItem from '../ServiceItem/ServiceItem';
 import './ServiceItems.scss';
 
 const ServiceItems = () => {
-  const serviceList = Services.map((item) => {
+  const serviceItems = Services.map(({ title, navPath, src }) => {
     return (
-      <Link key={item.title} to={item.navPath} className="link-item">
-        <ServiceItem title={item.title} src={item.src} />
+      <Link key={title} to={navPath} className="link-item">
+        <ServiceItem title={title} src={src} />
       </Link>
     );
   });
 
   return (
     <div>
-      <section className="service-items">{serviceList}</section>
+      <section className="service-items">{serviceItems}</section>
     </div>
   );
 };

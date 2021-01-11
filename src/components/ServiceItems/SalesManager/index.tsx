@@ -6,13 +6,11 @@ import BottomPanel from './BottomPanel';
 
 const SalesManager = () => {
   return (
-    <>
-      <section className="sales-manager">
-        <TopPanel />
-        <MiddlePanel />
-        <BottomPanel />
-      </section>
-    </>
+    <section className="sales-manager">
+      <TopPanel />
+      <MiddlePanel />
+      <BottomPanel />
+    </section>
   );
 };
 
