@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
 const initialCount = 10;
+
 const Test = () => {
   const [value, stateOnChange] = useState('');
   const [size, setSize] = useState(0);
   const [count, setCount] = useState(initialCount);
+
+  const countDown = () => {
+    setCount(() => count - 1);
+  };
+
+  const countUp = () => {
+    setCount(() => count + 1);
+  };
 
   useEffect(() => {
     const resizeListener = () => {
@@ -32,18 +41,8 @@ const Test = () => {
       />
       <div>{count}</div>
       <input type="button" name="button" value="button" />
-      <input
-        type="button"
-        onClick={() => setCount(() => count - 1)}
-        name="-"
-        value="-"
-      />
-      <input
-        type="button"
-        onClick={() => setCount(() => count + 1)}
-        name="+"
-        value="+"
-      />
+      <input type="button" onClick={countDown} name="-" value="-" />
+      <input type="button" onClick={countUp} name="+" value="+" />
       <input
         type="button"
         onClick={() => setCount(initialCount)}
