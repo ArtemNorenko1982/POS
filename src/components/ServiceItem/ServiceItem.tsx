@@ -2,7 +2,7 @@ import React from 'react';
 import './ServiceItem.css';
 
 // eslint-disable-next-line react/prop-types
-const ServiceItem = ({ src = '' as string, title = '' as string }) => {
+const ServiceItem = ({ title, src }) => {
   return (
     <article className="service-item">
       <img src={src} alt="" />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link, Redirect, Route } from 'react-router-dom';
-import './Login.css';
+import { Link, Route } from 'react-router-dom';
+import './Login.scss';
 import * as RouteConstants from '../../constants/RouteConstants';
 import PasswordRecovery from '../PasswordRecovery/PasswordRecovery';
 import Auth from '../../helpers/Auth';

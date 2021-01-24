@@ -1,10 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import ServiceItem from '../ServiceItem/ServiceItem';
-import './ServiceItems.css';
 import * as RouteConstants from '../../constants/RouteConstants';
 
-const services = [
+const Services = [
   {
     title: 'Sales Manager',
     src: './img/coin.png',
@@ -47,16 +43,4 @@ const services = [
   },
 ];
 
-const ServiceItems = () => {
-  const serviceList = services.map((item) => {
-    return (
-      <Link key={item.title} to={item.navPath} className="link-item">
-        <ServiceItem title={item.title} src={item.src} />
-      </Link>
-    );
-  });
-
-  return <section className="service-items">{serviceList}</section>;
-};
-
-export default ServiceItems;
+export default Services;
