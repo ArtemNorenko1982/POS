@@ -42,7 +42,7 @@ const authReducer = (state, action) => {
   }
 };
 
-const authProvider = (props) => {
+const AuthProvider = (props) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [state, dispatch] = useReducer(authReducer, initialState);
 
@@ -75,4 +75,4 @@ const isUserAuthorized = () => {
   return result;
 };
 
-export { AuthContext, authProvider, isUserAuthorized };
+export { AuthContext, AuthProvider, isUserAuthorized };
