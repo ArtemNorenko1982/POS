@@ -4,8 +4,8 @@ import './Login.scss';
 
 import * as RouteConstants from '../../constants/RouteConstants';
 import PasswordRecovery from '../PasswordRecovery/PasswordRecovery';
-import useForm from '../../utils/hooks';
-import IUserState from '../../helpers/Types/UserSate';
+import useForm from '../../utils/Hooks/LoginHooks';
+import IUserState from '../../helpers/Types/UserState';
 
 const Login = (props) => {
   const { onChange, onSubmit, values } = useForm(props, {

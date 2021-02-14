@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { AuthContext } from '../helpers/Auth';
+import { AuthContext } from '../../helpers/AuthProvider';
 
 const LOGIN_USER = gql`
   mutation login($userName: String!, $password: String!) {
