@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import * as RouteConstants from '../../constants/RouteConstants';
 import './App.scss';
 import Router from '../../helpers/Router';
+import { AuthProvider } from '../../helpers/AuthProvider';
 
 class App extends Component {
   router = new Router();
@@ -10,8 +12,16 @@ class App extends Component {
     const baseRoute = this.router.detectBaseUserRoute();
     const result = (
       <div className="App">
-        <Route exect path={baseRoute.path} component={baseRoute.component} />
-        <Redirect to={baseRoute.path} />
+        <AuthProvider>
+          <BrowserRouter>
+            <Route
+              path={RouteConstants.MainRoute.path}
+              component={baseRoute.component}
+              render={() => <Redirect to={baseRoute.path} />}
+            />
+            {/* <Redirect to={baseRoute.path} /> */}
+          </BrowserRouter>
+        </AuthProvider>
       </div>
     );
     return result;
