@@ -3,7 +3,6 @@ import { Token } from '../constants/LocalStorageConstants';
 import { isNull } from '../utils/utils';
 import IUserState from './Types/UserState';
 
-const storedToken = localStorage.getItem(Token);
 let userData: IUserState = {
   userName: '',
   password: '',
@@ -11,10 +10,12 @@ let userData: IUserState = {
 };
 
 const isUserAuthorized = () => {
+  const storedToken = localStorage.getItem(Token);
   return !isNull(storedToken);
 };
 
 const determineUserData = () => {
+  const storedToken = localStorage.getItem(Token);
   const result = !isNull(storedToken);
   if (result) {
     userData = jwtDecode<IUserState>(storedToken as string);
