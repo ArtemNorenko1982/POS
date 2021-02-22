@@ -20,8 +20,6 @@ const useForm = (props, initialState = {}) => {
   const context = useContext(AuthContext);
   const [errors, setErrors] = useState({});
 
-  // const dataV = values as IUserState;
-
   const [loginUser] = useMutation(LOGIN_USER, {
     // eslint-disable-next-line @typescript-eslint/no-shadow
     update(_, { data: { login: values } }) {
