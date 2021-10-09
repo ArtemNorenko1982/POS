@@ -1,8 +1,9 @@
 interface NavMenuProps {
   menuItems: Array<{
-    src: string;
     title: string;
-    img?: Int16Array;
+    src: string;
+    img?: unknown;
+    action?: () => void;
   }>;
 }
 

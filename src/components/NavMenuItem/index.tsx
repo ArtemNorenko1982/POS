@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import './NavMenu.scss';
 
-const NavMenuItem = ({ src = '' as string, title = '' as string }) => {
-  return (
-    <li>
-      <Link to={src}>{title}</Link>
-    </li>
-  );
+type NavMenuItemProps = {
+  title: string;
+  src: string;
+  action?: () => void;
 };
+
+const NavMenuItem: FC<NavMenuItemProps> = ({
+  src = '',
+  title = '',
+  action = () => {},
+}) => (
+  <li>
+    <Link to={src} onClick={action}>
+      {title}
+    </Link>
+  </li>
+);
 
 export default NavMenuItem;

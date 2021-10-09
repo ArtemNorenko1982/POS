@@ -12,12 +12,12 @@ const App = () => {
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
-          <AuthRoute path={RouteConstants.MainRoute.path} component={Main} />
           <Route
             exact
             path={RouteConstants.LoginRoute.path}
             component={Login}
           />
+          <AuthRoute path={RouteConstants.MainRoute.path} component={Main} />
         </BrowserRouter>
       </AuthProvider>
     </div>
