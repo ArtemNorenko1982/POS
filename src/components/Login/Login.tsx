@@ -15,7 +15,6 @@ const Login = (props) => {
 
   return (
     <div className="main-screen slide-in-blurred-top">
-      <h1 className="welcome-title">Welcome to "Micro POS Pro"</h1>
       <form className="login" onSubmit={onSubmit} noValidate>
         <img className="user-image" src="./img/ava-default.png" alt="" />
         <h3 className="login_title">Type your credentials or scan a badge</h3>
@@ -57,7 +56,6 @@ const Login = (props) => {
         path={RouteConstants.PasswordRecoveryRoute.path}
         component={PasswordRecovery}
       />
-      {/* <Redirect to={RouteConstants.PasswordRecoveryRoute.path} /> */}
     </div>
   );
 };

@@ -18,9 +18,9 @@
         "isolatedModules": false,
         "noEmit": true,
         "jsx": "react",
-        "noImplicitAny": false
-        // "outDir": "./build/",
-        // "sourceMap": true,
+        "noImplicitAny": false,
+        "outDir": "./build/",
+         "sourceMap": true,
     },
     "include": [
         "src"

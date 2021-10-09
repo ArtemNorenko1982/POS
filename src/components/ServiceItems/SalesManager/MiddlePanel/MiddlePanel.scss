@@ -1,7 +1,47 @@
 .base-grid {
-    width: 75%;
+    width: 100%;
+    background-color: steelblue;
+    display: flex;
+}
+.middle-panel {
+    display: block;
     height: 532px;
-    background-color: rgb(179, 174, 174);
+    width: 75%;
+}
+
+.base-grid-title {
+    margin-left: 1%;
+    margin-right: auto;
+    color: whitesmoke;
+}
+
+.base-receipt-line {
+    display: flex;
+}
+
+.base-receipt-line:hover {
+    display: flex;
+    background-color: blue;
+}
+
+.base-receipt-line-item {
+    display: block;
+    width: 100%;
+    margin-left: 1%;
+    margin-right: auto;
+}
+
+.base-receipt-total {
+    display: flex;
+    width: 100%;
+    background-color: steelblue;
+}
+
+.base-receipt-total-line {
+    display: block;
+    width: 100%;
+    margin-left: 1%;
+    margin-right: auto;
 }
 
 .right-panel {

@@ -1,10 +1,10 @@
 import React from 'react';
-import NavMenuProps from '../../helpers/Types/NaMenuProps';
+import NavMenuProps from '../../helpers/Types/NavMenuProps';
 import NavMenuItem from '../NavMenuItem';
 
 const NavMenu = ({ menuItems }: NavMenuProps) => {
-  const navMenu = menuItems.map(({ src, title }) => {
-    return <NavMenuItem key={title} src={src} title={title} />;
+  const navMenu = menuItems.map(({ src, title, action }) => {
+    return <NavMenuItem key={title} src={src} title={title} action={action} />;
   });
 
   return (

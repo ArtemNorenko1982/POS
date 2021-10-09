@@ -13,7 +13,7 @@ import Services from '../Services';
 const Main = () => {
   return (
     <div>
-      <NavMenu menuItems={MainMenuItems} />
+      <NavMenu menuItems={MainMenuItems.menuItems} />
       <Switch>
         <AuthRoute path={RouteConstants.HomeRoute.path} component={Home} />
         <AuthRoute

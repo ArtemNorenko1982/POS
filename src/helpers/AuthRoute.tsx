@@ -5,6 +5,7 @@ import { isStringNull } from '../utils/utils';
 import AuthContext from './Contexts/AuthContext';
 import IUserState from './Types/UserState';
 import { isUserAuthorized } from './UserService';
+import * as RouteConstants from '../constants/RouteConstants';
 
 // eslint-disable-next-line react/prop-types
 const AuthRoute = ({ component: Component, ...rest }) => {
@@ -20,7 +21,7 @@ const AuthRoute = ({ component: Component, ...rest }) => {
       render={(props) =>
         // eslint-disable-next-line react/jsx-props-no-spreading
         isUserLegal === false ? (
-          <Redirect to="/login" />
+          <Redirect to={RouteConstants.LoginRoute.path} />
         ) : (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <Component {...props} />
