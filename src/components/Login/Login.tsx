@@ -16,41 +16,52 @@ const Login = (props) => {
   return (
     <div className="main-screen slide-in-blurred-top">
       <form className="login" onSubmit={onSubmit} noValidate>
-        <img className="user-image" src="./img/ava-default.png" alt="" />
-        <h3 className="login_title">Type your credentials or scan a badge</h3>
-        <label htmlFor="Login" className="login-label">
-          <input
-            className="input-common login-input"
-            id="Login"
-            type="text"
-            placeholder="User name or email"
-            name="userName"
-            value={(values as IUserState).userName}
-            onChange={onChange}
-          />
-        </label>
+        <div className="left-part">
+          <div>
+            <h3>MicroPOS Pro ver #1.0</h3>
+          </div>
+          <div>
+            <img className="app-image" src="./img/shopping-cart.png" alt="" />
+          </div>
+        </div>
+        <div className="vertical-line" />
+        <div className="right-part">
+          <img className="user-image" src="./img/ava-default.png" alt="" />
+          <h3 className="login-title">Authorization</h3>
+          <label htmlFor="Login" className="login-label">
+            <input
+              className="input-common login-input"
+              id="Login"
+              type="text"
+              placeholder="User name or email"
+              name="userName"
+              value={(values as IUserState).userName}
+              onChange={onChange}
+            />
+          </label>
 
-        <label htmlFor="Password" className="login-label">
-          <input
-            className="input-common password-input"
-            id="Password"
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={(values as IUserState).password}
-            onChange={onChange}
-          />
-        </label>
+          <label htmlFor="Password" className="login-label">
+            <input
+              className="input-common password-input"
+              id="Password"
+              type="password"
+              placeholder="Password"
+              name="password"
+              value={(values as IUserState).password}
+              onChange={onChange}
+            />
+          </label>
 
-        <button type="submit" className="login-button">
-          Submit
-        </button>
-        <Link
-          to={RouteConstants.PasswordRecoveryRoute.path}
-          className="common-link"
-        >
-          Forgot password
-        </Link>
+          <button type="submit" className="login-button">
+            Submit
+          </button>
+          <Link
+            to={RouteConstants.PasswordRecoveryRoute.path}
+            className="common-link"
+          >
+            Forgot password
+          </Link>
+        </div>
       </form>
       <Route
         path={RouteConstants.PasswordRecoveryRoute.path}
